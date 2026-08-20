@@ -537,6 +537,7 @@
 
 
 <body>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 <div class="app">
 
@@ -594,7 +595,23 @@
     </section>
 
 
+<section class="about" id="account">
 
+    <h3>👤 Мой аккаунт</h3>
+
+    <p id="userName">
+        Загрузка профиля...
+    </p>
+
+    <p id="userId">
+        Telegram ID: —
+    </p>
+
+    <p>
+        🔴 Подписка не активна
+    </p>
+
+</section>    
     <!-- FEATURES -->
 
     <section class="features">
@@ -899,6 +916,27 @@ function buy(days, price) {
 }
 
 </script>
+const tg = window.Telegram.WebApp;
+
+tg.ready();
+tg.expand();
+
+const user = tg.initDataUnsafe?.user;
+
+if (user) {
+
+    const name =
+        [user.first_name, user.last_name]
+        .filter(Boolean)
+        .join(" ");
+
+    document.getElementById("userName").textContent =
+        name || "Пользователь Telegram";
+
+    document.getElementById("userId").textContent =
+        "Telegram ID: " + user.id;
+
+}
 
 
 </body>
