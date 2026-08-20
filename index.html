@@ -38,7 +38,7 @@
                 ),
                 #08090d;
 
-            color: white;
+            color: #ffffff;
 
             font-family:
                 -apple-system,
@@ -49,6 +49,7 @@
                 sans-serif;
 
             -webkit-font-smoothing: antialiased;
+
         }
 
         button {
@@ -68,8 +69,8 @@
             margin: 0 auto;
 
             padding:
-                24px
-                18px
+                22px
+                16px
                 100px;
 
         }
@@ -85,7 +86,7 @@
 
             align-items: center;
 
-            margin-bottom: 28px;
+            margin-bottom: 20px;
 
         }
 
@@ -125,10 +126,6 @@
 
             background: #555b66;
 
-            box-shadow:
-                0 0 0 5px
-                rgba(255,255,255,0.03);
-
         }
 
 
@@ -136,15 +133,11 @@
 
         .hero {
 
-            position: relative;
-
-            overflow: hidden;
-
             text-align: center;
 
-            padding: 34px 22px;
+            padding: 30px 20px;
 
-            border-radius: 28px;
+            border-radius: 26px;
 
             background:
                 linear-gradient(
@@ -155,7 +148,7 @@
 
             border:
                 1px solid
-                rgba(124,92,255,0.18);
+                rgba(124,92,255,0.2);
 
             box-shadow:
                 0 20px 60px
@@ -165,13 +158,13 @@
 
         .vpn-icon {
 
-            width: 76px;
+            width: 72px;
 
-            height: 76px;
+            height: 72px;
 
             margin:
                 0 auto
-                20px;
+                18px;
 
             display: flex;
 
@@ -179,16 +172,12 @@
 
             justify-content: center;
 
-            border-radius: 23px;
+            border-radius: 22px;
 
             background:
-                rgba(124,92,255,0.14);
+                rgba(124,92,255,0.15);
 
-            border:
-                1px solid
-                rgba(124,92,255,0.20);
-
-            font-size: 32px;
+            font-size: 30px;
 
         }
 
@@ -207,11 +196,11 @@
         .hero h1 {
 
             margin:
-                14px
+                12px
                 0
                 10px;
 
-            font-size: 30px;
+            font-size: 29px;
 
             line-height: 1.1;
 
@@ -223,35 +212,44 @@
 
             color: #858995;
 
-            font-size: 14px;
+            font-size: 13px;
 
             line-height: 1.5;
 
             margin:
                 0
                 0
-                24px;
+                20px;
 
         }
 
 
-        /* BUTTON */
+        /* BUTTONS */
 
-        .primary-button {
+        .primary-button,
+        .secondary-button {
 
             width: 100%;
 
-            padding: 16px;
-
-            border: 0;
+            padding: 15px;
 
             border-radius: 15px;
 
-            color: white;
-
-            font-size: 15px;
+            font-size: 14px;
 
             font-weight: 800;
+
+            transition:
+                transform 0.15s,
+                opacity 0.15s;
+
+        }
+
+        .primary-button {
+
+            border: 0;
+
+            color: white;
 
             background:
                 linear-gradient(
@@ -262,17 +260,11 @@
 
             box-shadow:
                 0 10px 30px
-                rgba(124,92,255,0.25);
+                rgba(124,92,255,0.22);
 
         }
 
         .secondary-button {
-
-            width: 100%;
-
-            padding: 16px;
-
-            border-radius: 15px;
 
             color: white;
 
@@ -280,11 +272,7 @@
 
             border:
                 1px solid
-                rgba(255,255,255,0.07);
-
-            font-size: 15px;
-
-            font-weight: 800;
+                rgba(255,255,255,0.08);
 
         }
 
@@ -301,9 +289,9 @@
 
         .account {
 
-            margin-top: 14px;
+            margin-top: 12px;
 
-            padding: 20px;
+            padding: 18px;
 
             background: #111319;
 
@@ -315,24 +303,13 @@
 
         }
 
-        .account h3 {
-
-            margin:
-                0
-                0
-                12px;
+        .account-title {
 
             font-size: 16px;
 
-        }
+            font-weight: 800;
 
-        .account-row {
-
-            color: #858995;
-
-            font-size: 12px;
-
-            margin-top: 7px;
+            margin-bottom: 10px;
 
         }
 
@@ -346,9 +323,37 @@
 
         }
 
-        .inactive {
+        .account-id {
+
+            color: #777b86;
+
+            font-size: 11px;
+
+            margin-top: 5px;
+
+        }
+
+        .subscription {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 12px;
+
+            padding-top: 12px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.06);
 
             color: #ff6575;
+
+            font-size: 12px;
+
+            font-weight: 700;
 
         }
 
@@ -359,8 +364,7 @@
 
             display: grid;
 
-            grid-template-columns:
-                1fr 1fr;
+            grid-template-columns: 1fr 1fr;
 
             gap: 10px;
 
@@ -370,7 +374,7 @@
 
         .feature {
 
-            padding: 17px;
+            padding: 16px;
 
             background: #111319;
 
@@ -386,7 +390,7 @@
 
             font-size: 21px;
 
-            margin-bottom: 9px;
+            margin-bottom: 8px;
 
         }
 
@@ -406,6 +410,8 @@
 
             font-size: 11px;
 
+            line-height: 1.4;
+
             margin-top: 4px;
 
         }
@@ -415,37 +421,38 @@
 
         .plans {
 
-            margin-top: 30px;
+            margin-top: 28px;
 
         }
 
         .plans-title {
 
+            margin: 0;
+
             font-size: 23px;
 
-            margin:
-                0
-                0
-                5px;
+            letter-spacing: -0.5px;
 
         }
 
         .plans-subtitle {
 
+            margin:
+                5px
+                0
+                16px;
+
             color: #777b86;
 
             font-size: 12px;
-
-            margin:
-                0
-                18px
-                18px;
 
         }
 
         .plan {
 
-            padding: 20px;
+            position: relative;
+
+            padding: 19px;
 
             margin-bottom: 12px;
 
@@ -469,7 +476,7 @@
                 );
 
             border-color:
-                rgba(124,92,255,0.4);
+                rgba(124,92,255,0.45);
 
         }
 
@@ -479,14 +486,14 @@
 
             padding:
                 5px
-                8px;
+                9px;
 
-            margin-bottom: 14px;
+            margin-bottom: 12px;
 
             border-radius: 7px;
 
             background:
-                rgba(124,92,255,0.13);
+                rgba(124,92,255,0.14);
 
             color: #b7a9ff;
 
@@ -506,8 +513,6 @@
 
             align-items: center;
 
-            margin-bottom: 8px;
-
         }
 
         .plan-name {
@@ -520,7 +525,7 @@
 
         .price {
 
-            font-size: 21px;
+            font-size: 22px;
 
             font-weight: 900;
 
@@ -528,27 +533,27 @@
 
         .plan-description {
 
+            margin:
+                7px
+                0
+                14px;
+
             color: #777b86;
 
             font-size: 12px;
 
-            margin:
-                0
-                0
-                15px;
-
         }
 
         .plan-features {
-
-            list-style: none;
 
             padding: 0;
 
             margin:
                 0
                 0
-                18px;
+                17px;
+
+            list-style: none;
 
         }
 
@@ -558,7 +563,51 @@
 
             font-size: 12px;
 
+            margin-bottom: 7px;
+
+        }
+
+
+        /* HAPP */
+
+        .happ {
+
+            margin-top: 25px;
+
+            padding: 20px;
+
+            border-radius: 21px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #12151d,
+                    #101117
+                );
+
+            border:
+                1px solid
+                rgba(255,255,255,0.07);
+
+        }
+
+        .happ-title {
+
+            font-size: 16px;
+
+            font-weight: 800;
+
             margin-bottom: 8px;
+
+        }
+
+        .happ-text {
+
+            color: #777b86;
+
+            font-size: 12px;
+
+            line-height: 1.6;
 
         }
 
@@ -567,7 +616,7 @@
 
         .about {
 
-            margin-top: 25px;
+            margin-top: 12px;
 
             padding: 20px;
 
@@ -623,12 +672,12 @@
 
             max-width: 450px;
 
-            padding: 14px;
+            padding: 13px;
 
             text-align: center;
 
             background:
-                rgba(18,19,25,0.92);
+                rgba(18,19,25,0.94);
 
             backdrop-filter:
                 blur(20px);
@@ -637,11 +686,28 @@
                 1px solid
                 rgba(255,255,255,0.08);
 
-            border-radius: 20px;
+            border-radius: 19px;
 
             color: #858995;
 
             font-size: 10px;
+
+        }
+
+
+        @media (max-width: 360px) {
+
+            .hero h1 {
+
+                font-size: 26px;
+
+            }
+
+            .price {
+
+                font-size: 19px;
+
+            }
 
         }
 
@@ -663,11 +729,15 @@
         <div>
 
             <div class="logo">
+
                 CEEDEE <span>VPN</span>
+
             </div>
 
             <div class="subtitle">
+
                 Быстрый. Простой. Твой.
+
             </div>
 
         </div>
@@ -683,27 +753,38 @@
     <section class="hero">
 
         <div class="vpn-icon">
+
             ⚡
+
         </div>
 
         <div class="status">
+
             VPN НЕ АКТИВЕН
+
         </div>
 
         <h1>
+
             Защити своё<br>
+
             соединение
+
         </h1>
 
         <p>
+
             Быстрый VPN без лишних сложностей.
+
         </p>
 
         <button
             class="primary-button"
             onclick="scrollToPlans()"
         >
-            ⚡ Подключить VPN
+
+            ⚡ Выбрать тариф
+
         </button>
 
     </section>
@@ -714,26 +795,40 @@
 
     <section class="account">
 
-        <h3>
+        <div class="account-title">
+
             👤 Мой аккаунт
-        </h3>
+
+        </div>
 
         <div
-            class="account-row account-name"
+            class="account-name"
             id="userName"
         >
+
             Загрузка профиля...
+
         </div>
 
         <div
-            class="account-row"
+            class="account-id"
             id="userId"
         >
+
             Telegram ID: —
+
         </div>
 
-        <div class="account-row inactive">
-            🔴 Подписка не активна
+        <div class="subscription">
+
+            🔴
+
+            <span>
+
+                Подписка не активна
+
+            </span>
+
         </div>
 
     </section>
@@ -748,15 +843,21 @@
         <div class="feature">
 
             <div class="feature-icon">
+
                 ⚡
+
             </div>
 
             <strong>
+
                 Быстро
+
             </strong>
 
             <span>
+
                 Высокая скорость
+
             </span>
 
         </div>
@@ -765,15 +866,21 @@
         <div class="feature">
 
             <div class="feature-icon">
+
                 🔒
+
             </div>
 
             <strong>
+
                 Безопасно
+
             </strong>
 
             <span>
+
                 Защищённое соединение
+
             </span>
 
         </div>
@@ -782,15 +889,21 @@
         <div class="feature">
 
             <div class="feature-icon">
+
                 🌍
+
             </div>
 
             <strong>
+
                 Серверы
+
             </strong>
 
             <span>
+
                 Разные страны
+
             </span>
 
         </div>
@@ -799,15 +912,21 @@
         <div class="feature">
 
             <div class="feature-icon">
+
                 📱
+
             </div>
 
             <strong>
+
                 Happ
+
             </strong>
 
             <span>
+
                 Простое подключение
+
             </span>
 
         </div>
@@ -825,11 +944,15 @@
     >
 
         <h2 class="plans-title">
+
             Тарифы
+
         </h2>
 
         <p class="plans-subtitle">
+
             Выбери подходящий вариант подписки
+
         </p>
 
 
@@ -839,23 +962,31 @@
         <div class="plan popular">
 
             <div class="popular-label">
+
                 ПОПУЛЯРНЫЙ
+
             </div>
 
             <div class="plan-header">
 
                 <div class="plan-name">
+
                     30 дней
+
                 </div>
 
                 <div class="price">
-                    119 ₽
+
+                    150 ₽
+
                 </div>
 
             </div>
 
             <p class="plan-description">
+
                 Полный доступ к CEEDEE VPN
+
             </p>
 
             <ul class="plan-features">
@@ -880,9 +1011,11 @@
 
             <button
                 class="primary-button"
-                onclick="buy(30, 119)"
+                onclick="buy(30, 150)"
             >
-                Купить за 119 ₽
+
+                Купить за 150 ₽
+
             </button>
 
         </div>
@@ -896,17 +1029,23 @@
             <div class="plan-header">
 
                 <div class="plan-name">
+
                     90 дней
+
                 </div>
 
                 <div class="price">
+
                     299 ₽
+
                 </div>
 
             </div>
 
             <p class="plan-description">
+
                 Выгоднее помесячной оплаты
+
             </p>
 
             <ul class="plan-features">
@@ -929,7 +1068,9 @@
                 class="secondary-button"
                 onclick="buy(90, 299)"
             >
+
                 Купить за 299 ₽
+
             </button>
 
         </div>
@@ -943,17 +1084,23 @@
             <div class="plan-header">
 
                 <div class="plan-name">
+
                     365 дней
+
                 </div>
 
                 <div class="price">
+
                     999 ₽
+
                 </div>
 
             </div>
 
             <p class="plan-description">
+
                 Максимальная экономия
+
             </p>
 
             <ul class="plan-features">
@@ -976,11 +1123,35 @@
                 class="secondary-button"
                 onclick="buy(365, 999)"
             >
+
                 Купить за 999 ₽
+
             </button>
 
         </div>
 
+
+    </section>
+
+
+
+    <!-- HAPP -->
+
+    <section class="happ">
+
+        <div class="happ-title">
+
+            📱 Подключение через Happ
+
+        </div>
+
+        <div class="happ-text">
+
+            После активации подписки ты получишь
+            данные для подключения VPN через
+            приложение Happ.
+
+        </div>
 
     </section>
 
@@ -991,13 +1162,17 @@
     <section class="about">
 
         <h3>
+
             🔐 CEEDEE VPN
+
         </h3>
 
         <p>
-            Простой VPN-сервис с быстрым подключением
-            через Happ. Выбери тариф, получи доступ
-            и подключись за несколько секунд.
+
+            Простой и доступный VPN-сервис.
+            Выбери тариф, активируй подписку
+            и подключайся через Happ.
+
         </p>
 
     </section>
@@ -1020,9 +1195,7 @@
 <script>
 
 
-/*
-    TELEGRAM MINI APP
-*/
+/* TELEGRAM MINI APP */
 
 window.addEventListener("load", function () {
 
@@ -1092,14 +1265,11 @@ window.addEventListener("load", function () {
 
     }
 
-
 });
 
 
 
-/*
-    SCROLL TO PLANS
-*/
+/* SCROLL */
 
 function scrollToPlans() {
 
@@ -1110,13 +1280,11 @@ function scrollToPlans() {
 
     if (plans) {
 
-
         plans.scrollIntoView({
 
             behavior: "smooth"
 
         });
-
 
     }
 
@@ -1124,12 +1292,7 @@ function scrollToPlans() {
 
 
 
-/*
-    TEST PURCHASE
-
-    Пока это только тест.
-    Настоящую оплату подключим позже.
-*/
+/* TEST PURCHASE */
 
 function buy(days, price) {
 
