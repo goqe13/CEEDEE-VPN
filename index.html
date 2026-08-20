@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -9,7 +12,10 @@
 
     <title>CEEDEE VPN</title>
 
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -19,7 +25,9 @@
         }
 
         body {
+
             margin: 0;
+
             min-height: 100vh;
 
             background:
@@ -30,7 +38,7 @@
                 ),
                 #08090d;
 
-            color: #ffffff;
+            color: white;
 
             font-family:
                 -apple-system,
@@ -44,12 +52,17 @@
         }
 
         button {
+
             font-family: inherit;
+
             cursor: pointer;
+
         }
 
         .app {
+
             width: 100%;
+
             max-width: 480px;
 
             margin: 0 auto;
@@ -58,37 +71,54 @@
                 24px
                 18px
                 100px;
+
         }
 
 
         /* HEADER */
 
         header {
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             margin-bottom: 28px;
+
         }
 
         .logo {
+
             font-size: 24px;
+
             font-weight: 900;
+
             letter-spacing: -0.8px;
+
         }
 
         .logo span {
+
             color: #7c5cff;
+
         }
 
         .subtitle {
+
             color: #777b86;
+
             font-size: 11px;
+
             margin-top: 4px;
+
         }
 
         .status-dot {
+
             width: 10px;
+
             height: 10px;
 
             border-radius: 50%;
@@ -96,14 +126,18 @@
             background: #555b66;
 
             box-shadow:
-                0 0 0 5px rgba(255,255,255,0.03);
+                0 0 0 5px
+                rgba(255,255,255,0.03);
+
         }
 
 
         /* HERO */
 
         .hero {
+
             position: relative;
+
             overflow: hidden;
 
             text-align: center;
@@ -126,31 +160,13 @@
             box-shadow:
                 0 20px 60px
                 rgba(0,0,0,0.35);
-        }
 
-        .hero::before {
-            content: "";
-
-            position: absolute;
-
-            width: 180px;
-            height: 180px;
-
-            top: -80px;
-            right: -60px;
-
-            background:
-                rgba(124,92,255,0.16);
-
-            filter: blur(50px);
-
-            border-radius: 50%;
         }
 
         .vpn-icon {
-            position: relative;
 
             width: 76px;
+
             height: 76px;
 
             margin:
@@ -158,7 +174,9 @@
                 20px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             border-radius: 23px;
@@ -171,64 +189,69 @@
                 rgba(124,92,255,0.20);
 
             font-size: 32px;
+
         }
 
         .status {
+
             color: #888d98;
 
             font-size: 10px;
+
             font-weight: 900;
 
             letter-spacing: 1.2px;
+
         }
 
         .hero h1 {
+
             margin:
                 14px
                 0
                 10px;
 
             font-size: 30px;
+
             line-height: 1.1;
 
             letter-spacing: -1px;
+
         }
 
         .hero p {
+
             color: #858995;
 
             font-size: 14px;
+
             line-height: 1.5;
 
             margin:
                 0
                 0
                 24px;
+
         }
 
 
-        /* BUTTONS */
+        /* BUTTON */
 
-        .primary-button,
-        .secondary-button {
+        .primary-button {
+
             width: 100%;
 
             padding: 16px;
 
-            border-radius: 15px;
-
-            font-size: 15px;
-            font-weight: 800;
-
-            transition:
-                transform 0.15s,
-                opacity 0.15s;
-        }
-
-        .primary-button {
             border: 0;
 
+            border-radius: 15px;
+
             color: white;
+
+            font-size: 15px;
+
+            font-weight: 800;
 
             background:
                 linear-gradient(
@@ -240,28 +263,100 @@
             box-shadow:
                 0 10px 30px
                 rgba(124,92,255,0.25);
+
         }
 
         .secondary-button {
+
+            width: 100%;
+
+            padding: 16px;
+
+            border-radius: 15px;
+
             color: white;
 
-            background:
-                #171922;
+            background: #171922;
 
             border:
                 1px solid
                 rgba(255,255,255,0.07);
+
+            font-size: 15px;
+
+            font-weight: 800;
+
         }
 
         button:active {
+
             transform: scale(0.97);
+
             opacity: 0.8;
+
+        }
+
+
+        /* ACCOUNT */
+
+        .account {
+
+            margin-top: 14px;
+
+            padding: 20px;
+
+            background: #111319;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.07);
+
+            border-radius: 20px;
+
+        }
+
+        .account h3 {
+
+            margin:
+                0
+                0
+                12px;
+
+            font-size: 16px;
+
+        }
+
+        .account-row {
+
+            color: #858995;
+
+            font-size: 12px;
+
+            margin-top: 7px;
+
+        }
+
+        .account-name {
+
+            color: white;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+        }
+
+        .inactive {
+
+            color: #ff6575;
+
         }
 
 
         /* FEATURES */
 
         .features {
+
             display: grid;
 
             grid-template-columns:
@@ -270,34 +365,41 @@
             gap: 10px;
 
             margin-top: 12px;
+
         }
 
         .feature {
+
             padding: 17px;
 
-            background:
-                #111319;
+            background: #111319;
 
             border:
                 1px solid
                 rgba(255,255,255,0.07);
 
             border-radius: 18px;
+
         }
 
         .feature-icon {
+
             font-size: 21px;
 
             margin-bottom: 9px;
+
         }
 
         .feature strong {
+
             display: block;
 
             font-size: 13px;
+
         }
 
         .feature span {
+
             display: block;
 
             color: #777b86;
@@ -305,25 +407,31 @@
             font-size: 11px;
 
             margin-top: 4px;
+
         }
 
 
         /* PLANS */
 
         .plans {
+
             margin-top: 30px;
+
         }
 
         .plans-title {
+
             font-size: 23px;
 
             margin:
                 0
                 0
                 5px;
+
         }
 
         .plans-subtitle {
+
             color: #777b86;
 
             font-size: 12px;
@@ -332,26 +440,27 @@
                 0
                 18px
                 18px;
+
         }
 
         .plan {
-            position: relative;
 
             padding: 20px;
 
             margin-bottom: 12px;
 
-            background:
-                #111319;
+            background: #111319;
 
             border:
                 1px solid
                 rgba(255,255,255,0.07);
 
             border-radius: 21px;
+
         }
 
         .plan.popular {
+
             background:
                 linear-gradient(
                     145deg,
@@ -361,9 +470,11 @@
 
             border-color:
                 rgba(124,92,255,0.4);
+
         }
 
         .popular-label {
+
             display: inline-block;
 
             padding:
@@ -384,28 +495,39 @@
             font-weight: 900;
 
             letter-spacing: 1px;
+
         }
 
         .plan-header {
+
             display: flex;
 
             justify-content: space-between;
+
             align-items: center;
 
             margin-bottom: 8px;
+
         }
 
         .plan-name {
+
             font-size: 17px;
+
             font-weight: 800;
+
         }
 
         .price {
+
             font-size: 21px;
+
             font-weight: 900;
+
         }
 
         .plan-description {
+
             color: #777b86;
 
             font-size: 12px;
@@ -414,54 +536,64 @@
                 0
                 0
                 15px;
+
         }
 
         .plan-features {
+
             list-style: none;
 
             padding: 0;
+
             margin:
                 0
                 0
                 18px;
+
         }
 
         .plan-features li {
+
             color: #b9bbc3;
 
             font-size: 12px;
 
             margin-bottom: 8px;
+
         }
 
 
         /* ABOUT */
 
         .about {
+
             margin-top: 25px;
 
             padding: 20px;
 
             border-radius: 20px;
 
-            background:
-                #111319;
+            background: #111319;
 
             border:
                 1px solid
                 rgba(255,255,255,0.07);
+
         }
 
         .about h3 {
+
             margin:
                 0
                 0
                 8px;
 
             font-size: 16px;
+
         }
 
         .about p {
+
             color: #777b86;
 
             font-size: 12px;
@@ -469,15 +601,18 @@
             line-height: 1.6;
 
             margin: 0;
+
         }
 
 
         /* BOTTOM */
 
         .bottom {
+
             position: fixed;
 
             left: 50%;
+
             bottom: 12px;
 
             transform:
@@ -504,40 +639,19 @@
 
             border-radius: 20px;
 
-            box-shadow:
-                0 15px 40px
-                rgba(0,0,0,0.35);
-
             color: #858995;
 
             font-size: 10px;
-        }
 
-
-        /* MOBILE */
-
-        @media (max-width: 360px) {
-
-            .app {
-                padding-left: 14px;
-                padding-right: 14px;
-            }
-
-            .hero h1 {
-                font-size: 27px;
-            }
-
-            .price {
-                font-size: 18px;
-            }
         }
 
     </style>
+
 </head>
 
 
 <body>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
 
 <div class="app">
 
@@ -595,26 +709,41 @@
     </section>
 
 
-<section class="about" id="account">
 
-    <h3>👤 Мой аккаунт</h3>
+    <!-- ACCOUNT -->
 
-    <p id="userName">
-        Загрузка профиля...
-    </p>
+    <section class="account">
 
-    <p id="userId">
-        Telegram ID: —
-    </p>
+        <h3>
+            👤 Мой аккаунт
+        </h3>
 
-    <p>
-        🔴 Подписка не активна
-    </p>
+        <div
+            class="account-row account-name"
+            id="userName"
+        >
+            Загрузка профиля...
+        </div>
 
-</section>    
+        <div
+            class="account-row"
+            id="userId"
+        >
+            Telegram ID: —
+        </div>
+
+        <div class="account-row inactive">
+            🔴 Подписка не активна
+        </div>
+
+    </section>
+
+
+
     <!-- FEATURES -->
 
     <section class="features">
+
 
         <div class="feature">
 
@@ -682,6 +811,7 @@
             </span>
 
         </div>
+
 
     </section>
 
@@ -851,6 +981,7 @@
 
         </div>
 
+
     </section>
 
 
@@ -888,56 +1019,144 @@
 
 <script>
 
+
+/*
+    TELEGRAM MINI APP
+*/
+
+window.addEventListener("load", function () {
+
+
+    const tg =
+        window.Telegram.WebApp;
+
+
+    tg.ready();
+
+    tg.expand();
+
+
+    const user =
+        tg.initDataUnsafe?.user;
+
+
+    if (user) {
+
+
+        const name =
+
+            [
+                user.first_name,
+                user.last_name
+            ]
+
+            .filter(Boolean)
+
+            .join(" ");
+
+
+        document
+            .getElementById("userName")
+            .textContent =
+
+            name ||
+            "Пользователь Telegram";
+
+
+        document
+            .getElementById("userId")
+            .textContent =
+
+            "Telegram ID: " +
+            user.id;
+
+
+    }
+
+    else {
+
+
+        document
+            .getElementById("userName")
+            .textContent =
+
+            "Пользователь Telegram";
+
+
+        document
+            .getElementById("userId")
+            .textContent =
+
+            "Telegram ID недоступен";
+
+
+    }
+
+
+});
+
+
+
+/*
+    SCROLL TO PLANS
+*/
+
 function scrollToPlans() {
+
 
     const plans =
         document.getElementById("plans");
 
+
     if (plans) {
 
+
         plans.scrollIntoView({
+
             behavior: "smooth"
+
         });
+
 
     }
 
 }
 
 
+
+/*
+    TEST PURCHASE
+
+    Пока это только тест.
+    Настоящую оплату подключим позже.
+*/
+
 function buy(days, price) {
 
+
     alert(
+
         "CEEDEE VPN\n\n" +
-        "Тариф: " + days + " дней\n" +
-        "Стоимость: " + price + " ₽\n\n" +
-        "Оплата будет подключена на следующем этапе."
+
+        "Тариф: " +
+        days +
+        " дней\n" +
+
+        "Стоимость: " +
+        price +
+        " ₽\n\n" +
+
+        "Оплата будет подключена " +
+        "на следующем этапе."
+
     );
 
 }
 
+
 </script>
-const tg = window.Telegram.WebApp;
-
-tg.ready();
-tg.expand();
-
-const user = tg.initDataUnsafe?.user;
-
-if (user) {
-
-    const name =
-        [user.first_name, user.last_name]
-        .filter(Boolean)
-        .join(" ");
-
-    document.getElementById("userName").textContent =
-        name || "Пользователь Telegram";
-
-    document.getElementById("userId").textContent =
-        "Telegram ID: " + user.id;
-
-}
 
 
 </body>
+
 </html>
